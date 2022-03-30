@@ -48,15 +48,15 @@ export class ProductListComponent implements OnInit {
 
   getProductCategory() {
 
-    // if (this.hasCategoryId) {
-    //   // get the "id" param string. convert string to a number
-    //   // @ts-ignore
-    //   this.currentCategoryId = +this.route.snapshot.paramMap.get('id');
-    // }
-    // else {
-    //   // category id not available...default to category id 1
-    //   this.currentCategoryId = 100;
-    // }
+    if (this.hasCategoryId) {
+      // get the "id" param string. convert string to a number
+      // @ts-ignore
+      this.currentCategoryId = +this.route.snapshot.paramMap.get('id');
+    }
+    else {
+      // category id not available...default to category id 1
+      this.currentCategoryId = 100;
+    }
 
     this.productService.getProductCategoryById(2).subscribe(
       data => {
