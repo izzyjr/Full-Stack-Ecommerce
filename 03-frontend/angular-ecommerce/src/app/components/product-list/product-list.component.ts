@@ -12,7 +12,7 @@ export class ProductListComponent implements OnInit {
 
   products: Product[] = [];
   currentCategoryId: number | undefined;
-  currentCategoryName: String | undefined;
+  currentCategoryName: string | undefined;
   searchMode: boolean | undefined;
 
   constructor(private productService: ProductService,
